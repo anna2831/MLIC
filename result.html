@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Movie Genre Prediction Result</title>
+</head>
+<body>
+    <h1>Movie Genre Prediction Result</h1>
+    <img src="{{ photo_path }}" alt="Uploaded Movie Poster">
+    <h2>Top 3 Predicted Genres:</h2>
+    <ul>
+        {% for genre in genres %}
+            <li>{{ genre }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
